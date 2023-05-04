@@ -52,7 +52,7 @@ namespace bomberman {
             rotation.z = 0;
         } else if (direction == 3 && !dir[3]) {
             MoveTo(rPos.x, round(pos.z - .6f));
-            rotation.z = 3;
+            rotation.z = -3;
         } else if (direction == 4 && elapsed > 5000.) {
             if (IsBreakable(round(pos.x + .6f), rPos.z) ||
                 IsBreakable(round(pos.x - .6f), rPos.z) ||
@@ -331,7 +331,7 @@ namespace bomberman {
             rotation.z = 0;
         } else if (MyGamepad::isKeyDown(keys->down()) || GetGamepad()->down()) {
             MoveTo(rPos.x, round(pos.z - .6f));
-            rotation.z = 3;
+            rotation.z = -3;
         }
     }
 

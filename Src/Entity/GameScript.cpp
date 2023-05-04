@@ -26,8 +26,8 @@ namespace bomberman {
         positions.emplace_back(-offsetX, 0.0f, -offsetY);
         rotations.emplace_back(.0f, .0f, -1.5f);
         rotations.emplace_back(.0f, .0f, -1.5f);
-        rotations.emplace_back(.0f, .0f, 3.0f);
-        rotations.emplace_back(.0f, .0f, 3.0f);
+        rotations.emplace_back(.0f, .0f, -3.0f);
+        rotations.emplace_back(.0f, .0f, -3.0f);
         powerUpPos.emplace_back(175.0f, 355.0f);
         powerUpPos.emplace_back(175.0f, 755.0f);
         powerUpPos.emplace_back(1635.0f, 355.0f);
