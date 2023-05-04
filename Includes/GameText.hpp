@@ -47,7 +47,7 @@ namespace bomberman {
         private:
             int _percentage;
         public:
-            GameLoading() : GameText("../Assets/Font/Beauty_Forest.free.ttf", "Loading...\n\t0%", 855, 400, 125, WHITE) {
+            GameLoading() : GameText("Assets/Font/Beauty_Forest.free.ttf", "Loading...\n\t0%", 855, 400, 125, WHITE) {
                 _percentage = 0;
             };
             void UpdateAndDraw(int new_percentage) {
@@ -69,7 +69,7 @@ namespace bomberman {
             float _wall;
 
         public:
-            GamePowerUp() : GameText("../Assets/Font/Beauty_Forest.free.ttf", "", 0, 0, 80, BLACK) {
+            GamePowerUp() : GameText("Assets/Font/Beauty_Forest.free.ttf", "", 0, 0, 80, BLACK) {
             }
 
             void SetPlayer(GamePlayer *player) {
