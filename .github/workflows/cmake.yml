@@ -61,5 +61,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: ${{matrix.name}}
-        path: ${{github.workspace}}/Assets/
+        path: |
+          ${{github.workspace}}/README.md
+          ${{github.workspace}}/Assets
 
