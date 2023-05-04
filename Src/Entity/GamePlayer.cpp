@@ -43,10 +43,10 @@ namespace bomberman {
 
         if (direction == 0 && !dir[0]) {
             MoveTo(round(pos.x + .6f), rPos.z);
-            rotation.z = -1.5;
+            rotation.z = 1.5;
         } else if (direction == 1 && !dir[1]) {
             MoveTo(round(pos.x - .6f), rPos.z);
-            rotation.z = 1.5;
+            rotation.z = -1.5;
         } else if (direction == 2 && !dir[2]) {
             MoveTo(rPos.x, round(pos.z + .6f));
             rotation.z = 0;
@@ -322,10 +322,10 @@ namespace bomberman {
         }
         if (MyGamepad::isKeyDown(keys->left()) || GetGamepad()->left()) {
             MoveTo(round(pos.x + .6f), rPos.z);
-            rotation.z = -1.5;
+            rotation.z = 1.5;
         } else if (MyGamepad::isKeyDown(keys->right()) || GetGamepad()->right()) {
             MoveTo(round(pos.x - .6f), rPos.z);
-            rotation.z = 1.5;
+            rotation.z = -1.5;
         } else if (MyGamepad::isKeyDown(keys->up()) || GetGamepad()->up()) {
             MoveTo(rPos.x, round(pos.z + .6f));
             rotation.z = 0;

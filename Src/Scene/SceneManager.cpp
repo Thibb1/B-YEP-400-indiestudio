@@ -101,7 +101,7 @@ namespace bomberman {
                                             0,
                                             1.5f);
         bomb->SetPosition(MyVector3{.6f, .0f, .6f});
-        bomb->SetRotation(MyVector3{0.f, 0.f, 2.3f});
+        bomb->SetRotation(MyVector3{0.f, 0.f, -2.3f});
         menu->AddEntity(bomb);
         display_loading(60);
         menu->GetText(2)->SetActive(false);

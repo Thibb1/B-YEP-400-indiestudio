@@ -24,8 +24,8 @@ namespace bomberman {
         positions.emplace_back(offsetX, 0.0f, -offsetY);
         positions.emplace_back(-offsetX, 0.0f, offsetY);
         positions.emplace_back(-offsetX, 0.0f, -offsetY);
-        rotations.emplace_back(.0f, .0f, 1.5f);
-        rotations.emplace_back(.0f, .0f, 1.5f);
+        rotations.emplace_back(.0f, .0f, -1.5f);
+        rotations.emplace_back(.0f, .0f, -1.5f);
         rotations.emplace_back(.0f, .0f, 3.0f);
         rotations.emplace_back(.0f, .0f, 3.0f);
         powerUpPos.emplace_back(175.0f, 355.0f);
@@ -208,7 +208,7 @@ namespace bomberman {
                 auto winner = players.at(0);
                 winner->Reset();
                 winner->SetPosition(MyVector3{0.f, 0.f, 0.f});
-                winner->SetRotation(MyVector3{0.f, 0.f, 1.8f});
+                winner->SetRotation(MyVector3{0.f, 0.f, -1.8f});
                 winner->SetScale(.1f);
                 winner->SetPlay(false);
                 winner->SetActive(true);
