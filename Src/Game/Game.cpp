@@ -27,7 +27,7 @@ namespace bomberman {
         Window::setConfigFlags(FLAG_MSAA_4X_HINT);
         MySound::initAudioDevice();
         Window::setTargetFPS(60);
-        flavicon = Load::loadImage("../Assets/Bomb/bombFlavicon.png");
+        flavicon = Load::loadImage("Assets/Bomb/bombFlavicon.png");
         Window::setIcon(flavicon);
         std::srand(std::time(nullptr));
         try {
@@ -39,7 +39,7 @@ namespace bomberman {
     }
 
     void Game::run() {
-        Shader shader = Load::loadShader(nullptr, TextFormat("../Assets/Shaders/bloom.fs", 330));
+        Shader shader = Load::loadShader(nullptr, TextFormat("Assets/Shaders/bloom.fs", 330));
         RenderTexture2D target = Load::loadRenderTexture(width, height);
         auto rTarget = MyRectangle{0, 0, float(width), float(-height)};
 

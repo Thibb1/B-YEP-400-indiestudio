@@ -9,15 +9,15 @@
 
 namespace bomberman {
     GameBomb::GameBomb(int fireUp)
-            : AnimatedGameObject("../Assets/Level/bomb.iqm",
-                                 "../Assets/Level/bomb.png",
-                                 "../Assets/Level/bomb.iqm",
+            : AnimatedGameObject("Assets/Level/bomb.iqm",
+                                 "Assets/Level/bomb.png",
+                                 "Assets/Level/bomb.iqm",
                                  0,
                                  .8f), fireUp(fireUp) {
         position = MyVector3{-.5f, 0.0f, -.5f};
         rotation.z = 3.f;
         previous = std::chrono::system_clock::now();
-        boom = MySound::loadSound("../Assets/Bomb/boom.mp3");
+        boom = MySound::loadSound("Assets/Bomb/boom.mp3");
         MySound::setSoundVolume(boom, 0.5f);
     }
 
@@ -28,7 +28,7 @@ namespace bomberman {
             NextFrame();
             if (!exploded && elapsed >= 4000) {
                 exploded = 1;
-                explosion = new AnimatedGameObject("../Assets/Level/explosion.iqm", 0, .8f);
+                explosion = new AnimatedGameObject("Assets/Level/explosion.iqm", 0, .8f);
                 //explosion->SetPosition(position);
                 MySound::playSound(boom);
             }

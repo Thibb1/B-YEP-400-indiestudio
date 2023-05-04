@@ -8,6 +8,10 @@
 
 The aim of the **Indie Studio** is to implement a **cross-platform** 3D video game with **real-world** tools.
 
+## Download
+
+You can download the game from the [release page](https://github.com/Thibb1/B-YEP-400-indiestudio/releases/latest).
+
 ## Compilation
 
 Use **CMake**:
@@ -15,7 +19,7 @@ Use **CMake**:
 - **Linux / MacOS**:
 
 ```
-mkdir build && cd build
+mkdir build && cp -r Assets build && cd build
 cmake .. -G "Unix Makefiles"
 cmake --build .
 ./bomberman
@@ -24,7 +28,7 @@ cmake --build .
 - **Windows**:
 
 ```
-mkdir build && cd build
+mkdir build && copy Assets build && cd build
 cmake .. -G "Visual Studio 17"
 cmake --build .
 bomberman.exe

@@ -25,10 +25,12 @@ jobs:
         - os: windows-latest
           generator: "Visual Studio 17"
           artifact: "bomberman.exe"
+          name: "Windows"
         - os: ubuntu-latest
           generator: "Unix Makefiles"
           dependencies: "libasound2-dev mesa-common-dev libx11-dev libxrandr-dev libxi-dev xorg-dev libgl1-mesa-dev libglu1-mesa-dev"
           artifact: "bomberman"
+          name: "Linux"
     
     runs-on: ${{ matrix.os }}
 
@@ -49,9 +51,11 @@ jobs:
       # Build your program with the given configuration
       run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}
 
-    - name: Archive
+    - name: Archive artifacts
       uses: actions/upload-artifact@v3
       with:
-        name: "bomberman-${{matrix.os}}-${{env.BUILD_TYPE}}"
-        path: ${{github.workspace}}/build/${{matrix.artifact}}
+        name: ${{matrix.name}}
+        path: |
+          ${{github.workspace}}/build/${{matrix.artifact}}
+          ${{github.workspace}}/Assets
 

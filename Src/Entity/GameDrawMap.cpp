@@ -17,12 +17,12 @@ namespace bomberman {
         _cubePosition.z = 0;
         _textureBrick = Load::loadTexture(texturePathBrick.c_str());
         _textureWood = Load::loadTexture(texturePathWood.c_str());
-        _textureFire = Load::loadTexture("../Assets/PowerUps/fireUp.png");
-        _textureBomb = Load::loadTexture("../Assets/PowerUps/bomb.png");
-        _textureSpeed = Load::loadTexture("../Assets/PowerUps/speed.png");
-        _textureWall = Load::loadTexture("../Assets/PowerUps/wall.png");
+        _textureFire = Load::loadTexture("Assets/PowerUps/fireUp.png");
+        _textureBomb = Load::loadTexture("Assets/PowerUps/bomb.png");
+        _textureSpeed = Load::loadTexture("Assets/PowerUps/speed.png");
+        _textureWall = Load::loadTexture("Assets/PowerUps/wall.png");
         _color = color;
-        _planeTexture = Load::loadTexture("../Assets/Level/plane.png");
+        _planeTexture = Load::loadTexture("Assets/Level/plane.png");
         planeModel = Load::loadModelFromMesh(GenMeshPlane(MAP_WIDTH - 2, MAP_HEIGHT - 2, 1, 1));
         Load::setMaterialTexture(&planeModel.materials[0], MATERIAL_MAP_DIFFUSE, _planeTexture);
         _map.resize(MAP_HEIGHT);

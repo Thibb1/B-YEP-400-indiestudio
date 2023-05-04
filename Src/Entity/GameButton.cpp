@@ -19,7 +19,7 @@ namespace bomberman {
         state = false;
         collision = MyRectangle{float(posX), float(posY), float(onTexture.width), float(onTexture.height)};
         tint = WHITE;
-        click = MySound::loadSound("../Assets/Bomb/click.mp3");
+        click = MySound::loadSound("Assets/Bomb/click.mp3");
     }
 
     GameButton::~GameButton() {
