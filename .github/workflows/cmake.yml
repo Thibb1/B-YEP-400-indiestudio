@@ -26,6 +26,8 @@ jobs:
         - os: ubuntu-latest
           generator: "Unix Makefiles"
           build_command: cmake --build . --config ${{env.BUILD_TYPE}}
+    
+    runs-on: ${{ matrix.os }}
 
     steps:
     - uses: actions/checkout@v3
@@ -40,17 +42,14 @@ jobs:
       run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}
 
     - name: Cache
-        uses: actions/cache@v3
-        with:
-          path: |
-            ${{github.workspace}}/build
-          key: ${{runner.os}}-build-${{env.BUILD_TYPE}}
+      uses: actions/cache@v3
+      with:
+        path: |
+          ${{github.workspace}}/build
+        key: ${{runner.os}}-build-${{env.BUILD_TYPE}}
 
     - name: Archive
       uses: actions/upload-artifact@v3
       with:
         name: build
         path: ${{github.workspace}}/build
-
-
-
