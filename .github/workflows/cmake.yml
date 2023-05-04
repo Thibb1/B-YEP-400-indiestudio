@@ -26,7 +26,7 @@ jobs:
           generator: "Visual Studio 17"
         - os: ubuntu-latest
           generator: "Unix Makefiles"
-          dependencies: "libxrandr-dev"
+          dependencies: "libxrandr-dev libxinerama"
     
     runs-on: ${{ matrix.os }}
 
