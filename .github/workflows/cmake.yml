@@ -25,12 +25,12 @@ jobs:
         - os: windows-latest
           generator: "Visual Studio 17"
           artifact: "bomberman.exe"
-          name: "Bomberman-Windows"
+          name: "Bomberman_win"
         - os: ubuntu-latest
           generator: "Unix Makefiles"
           dependencies: "libasound2-dev mesa-common-dev libx11-dev libxrandr-dev libxi-dev xorg-dev libgl1-mesa-dev libglu1-mesa-dev"
           artifact: "bomberman"
-          name: "Bomberman-Linux"
+          name: "Bomberman_linux"
     
     runs-on: ${{ matrix.os }}
 
